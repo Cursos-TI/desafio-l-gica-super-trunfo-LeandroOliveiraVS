@@ -124,6 +124,9 @@ int main() {
     fgets(escolha, sizeof(escolha), stdin);
     escolha[strcspn(escolha, "\n")] = 0;
 
+    // Converte a escolha do usuário para minúsculas para evitar erros
+    toLowerStr(escolha);
+
     if (strcmp(escolha, "Populacao") == 0)
     {
       if (população1 > população2) {
